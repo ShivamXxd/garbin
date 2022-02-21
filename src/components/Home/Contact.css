@@ -1,0 +1,54 @@
+.contact_title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.ec_title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.contact_details {
+  margin: 1rem 0 1rem 0;
+  background-color: rgb(106, 211, 106);
+  padding: 1rem 3rem;
+}
+
+.form_container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.text_area {
+  width: 100%;
+  resize: none;
+}
+
+.contact_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mailto_part {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mailto_part div {
+  color: green;
+  font-size: 1.25rem;
+}
+.link_style {
+  text-decoration: none;
+  color: #000;
+}
+.link_style:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #000;
+}

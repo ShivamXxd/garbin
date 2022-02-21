@@ -1,0 +1,79 @@
+.home_container {
+  width: 100%;
+}
+.slogan {
+  text-align: center;
+  font-size: 2.5rem;
+  color: green;
+  text-shadow: 3px 3px 5px greenyellow;
+}
+.welcome_msg {
+  margin-left: 3rem;
+  font-size: 1.5rem;
+}
+.topic_title1 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-left: 3rem;
+}
+.topic_text {
+  margin: 0 4rem;
+}
+.calculations_card {
+  width: 75%;
+  margin: 2rem auto;
+  padding: 1rem 2rem 1rem 2rem;
+  position: relative;
+}
+.calculations_card:hover {
+  box-shadow: 0 0 10px #ccc;
+  transition: box-shadow 0.2s ease-out 0.1s;
+}
+.calculations ul {
+  list-style-type: none;
+}
+.title1 {
+  display: inline-block;
+}
+.title1 div {
+  text-align: center;
+}
+.title2 {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+}
+.title2 div {
+  text-align: center;
+}
+.calc_list {
+  margin-top: 1rem;
+  text-align: center;
+}
+.calc_list div {
+  line-height: 2.5rem;
+}
+.money_bin {
+  text-align: center;
+  width: 200px;
+}
+.mb_container {
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .title2 {
+    display: block;
+    position: unset;
+    text-align: center;
+  }
+  .calculations {
+    text-align: center;
+  }
+  .calc_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

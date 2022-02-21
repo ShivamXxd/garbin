@@ -1,0 +1,51 @@
+.login_link {
+  text-decoration: none;
+  color: #000;
+}
+.login_link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #000;
+}
+.imp {
+  color: red;
+}
+.address {
+  resize: none;
+  width: 100%;
+}
+.gender_part {
+  width: 100%;
+}
+.state {
+  display: flex;
+  align-items: center;
+}
+.state_dropdown {
+  width: 70%;
+  margin-left: 1rem;
+}
+.city_dropdown {
+  width: 70%;
+  margin-left: 1.5rem;
+}
+.city {
+  display: flex;
+  align-items: center;
+}
+.city_label,
+.state_label {
+  margin-top: 0.5rem;
+}
+.phone_input {
+  margin-top: 0.5rem;
+}
+.fix_labels {
+  margin-bottom: 0;
+}
+.fix_group {
+  margin-bottom: 1rem;
+}
+.form_card {
+  box-shadow: 0 0 10px #ccc;
+}
