@@ -122,7 +122,7 @@ function Register() {
           body: JSON.stringify(test),
         }
       );
-      navigate("/home");
+      navigate("/");
     } catch {
       setError("Failed to create an account!");
     }
