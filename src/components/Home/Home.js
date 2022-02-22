@@ -3,61 +3,49 @@ import Navbar from "../Header/Navbar";
 import Footer from "../Footer/Footer";
 import { useAuth } from "../../contexts/AuthContext";
 import { Card } from "react-bootstrap";
+import CircularProgress from "@mui/material/CircularProgress";
+import axios from "axios";
 import "./Home.css";
 
-function Home(props) {
+function Home() {
   const { currentUser } = useAuth();
   const currentUserMail = currentUser.email;
-  const userData = props.userData;
-  const [currentUserData, setCurrentUserData] = useState({
-    userID: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    phno: "",
-    gender: "",
-    address1: "",
-    address2: "",
-    stateValue: "",
-    cityValue: "",
-  });
-  let currentUserArray = [];
-  useEffect(() => {
-    function func() {
-      for (let i = 0; i < userData.length; i++) {
-        if (currentUserMail === userData[i].email) {
-          currentUserArray.push(userData[i]);
-        }
-      }
-      let currentUserObject = currentUserArray[0];
-      setCurrentUserData(currentUserObject);
-    }
-    func();
-    return () => {
-      setCurrentUserData({
-        userID: "",
-        firstName: "",
-        lastName: "",
-        email: "",
-        phno: "",
-        gender: "",
-        address1: "",
-        address2: "",
-        stateValue: "",
-        cityValue: "",
-      });
-    };
-  }, []);
+  const URL =
+    "https://garbin-database-4943e-default-rtdb.firebaseio.com/garbinUserDB.json";
+  const [userData, setUserData] = useState({});
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios(URL);
+      setUserData(response.data);
+      setLoading(false);
+    }
+    fetchData();
+  }, []);
+  const currentUserArray = [];
+  for (let key in userData) {
+    if (userData[key].email === currentUserMail)
+      currentUserArray.push(userData[key]);
+  }
+  const currentUserObject = currentUserArray[0];
+  if (loading) {
+    return (
+      <div className="spinner">
+        <CircularProgress />
+      </div>
+    );
+  }
   return (
     <>
       <Navbar />
       <div className="home_container">
         <div className="slogan">Clean India will make Green India</div>
         <div className="welcome_msg">
-          Welcome {currentUserData.firstName + " " + currentUserData.lastName}
+          Welcome{" "}
+          {currentUserObject.firstName + " " + currentUserObject.lastName}
           <div>
-            Your <strong>Unique ID</strong> is {currentUserData.userID}
+            Your <strong>Unique ID</strong> is {currentUserObject.userID}
           </div>
         </div>
         <div className="topic_title1">

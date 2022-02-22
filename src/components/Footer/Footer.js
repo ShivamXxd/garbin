@@ -21,6 +21,7 @@ function Footer() {
               <a
                 href="https://www.facebook.com/profile.php?id=100052664932615"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebook} className="fb_link" />
               </a>
@@ -30,6 +31,7 @@ function Footer() {
                 href="https://twitter.com/yashpatel3842"
                 className="tw_link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
@@ -39,6 +41,7 @@ function Footer() {
                 href="https://www.instagram.com/shivam_rg4/"
                 className="ig_link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
@@ -48,6 +51,7 @@ function Footer() {
                 className="tme_link"
                 href="https://t.me/yjpmovies"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faTelegram} />
               </a>
