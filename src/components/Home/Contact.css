@@ -52,3 +52,9 @@
   text-decoration: underline;
   color: #000;
 }
+
+@media (max-width: 1100px) {
+  .contact_container {
+    height: 100vh;
+  }
+}

@@ -20,7 +20,7 @@ function Register() {
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState("");
   const navigate = useNavigate();
-  const userID = Math.floor(Math.random() * 10000) + 1000;
+  const userID = Math.floor(Math.random() * 100000) + 10000;
   const [userData, setUserData] = useState({
     userID: userID,
     firstName: "",
@@ -33,6 +33,7 @@ function Register() {
     stateValue: "",
     cityValue: "",
   });
+
   const states = [
     "Gujarat",
     "Maharashtra",

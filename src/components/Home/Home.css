@@ -70,6 +70,9 @@
 }
 
 @media (max-width: 1100px) {
+  .home_container {
+    height: 100vh;
+  }
   .title2 {
     display: block;
     position: unset;

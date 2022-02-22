@@ -12,22 +12,6 @@ import ForgotPassword from "./components/Userauth/ForgotPassword";
 import "./App.css";
 
 function App() {
-  // const [userData, setUserData] = useState([]);
-
-  // useEffect(() => {
-  //   const getAllUsers = async () => {
-  //     const result = await axios(
-  //       "https://garbin-database-4943e-default-rtdb.firebaseio.com/garbinUserDB.json"
-  //     );
-  //     const userArray = [];
-  //     for (const key in result.data) {
-  //       userArray.push(result.data[key]);
-  //     }
-  //     setUserData(userArray);
-  //   };
-  //   getAllUsers();
-  // }, []);
-
   return (
     <Router>
       <AuthProvider>
