@@ -1,0 +1,64 @@
+.gift_card {
+  padding: 15px;
+  width: 40%;
+  margin: 1rem 0 1rem 150px;
+}
+
+.gift_card:hover {
+  box-shadow: 0 0 10px #ccc;
+}
+
+.gc_logo {
+  width: 150px;
+}
+.gc_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gc_title div {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.gc_amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.gc_token {
+  width: 55px;
+}
+
+.gc_buttons {
+  display: flex;
+  align-items: center;
+}
+
+.redeem_button {
+  border-radius: 2px;
+  padding: 3px;
+  margin: 0 5px;
+  border: 2px solid rgb(18, 121, 255);
+  background-color: rgb(18, 121, 255);
+  cursor: pointer;
+}
+.redeem_button:hover {
+  border: 2px solid rgb(0, 29, 158);
+}
+
+.help_button {
+  border-radius: 2px;
+  padding: 3px 8px;
+  margin: 0 5px;
+  border: 2px solid rgb(93, 228, 93);
+  background-color: rgb(93, 228, 93);
+  cursor: pointer;
+}
+
+.help_button:hover {
+  border: 2px solid rgb(0, 117, 0);
+}
