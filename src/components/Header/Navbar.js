@@ -2,14 +2,14 @@ import React from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import { useAuth } from "../../contexts/AuthContext";
+// import { useAuth } from "../../contexts/AuthContext";
 
 function Navbar() {
-  const { logout } = useAuth();
+  // const { logout } = useAuth();
   const navigate = useNavigate();
 
   async function handleLogout() {
-    await logout();
+    // await logout();
     navigate("/");
   }
 

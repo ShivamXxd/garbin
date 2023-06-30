@@ -15,7 +15,6 @@ function Contact() {
       "user_MDgRqpmjSumfyrZ39kcGx"
     );
     alert("Your message was delivered succesfully!");
-    e.target.value = "";
   };
 
   return (

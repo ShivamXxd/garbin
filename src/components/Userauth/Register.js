@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
-import { useAuth } from "../../contexts/AuthContext";
+// import { useAuth } from "../../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -15,7 +15,7 @@ function Register() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { signup } = useAuth();
+  // const { signup } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState("");
@@ -89,40 +89,41 @@ function Register() {
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
-      const {
-        userID,
-        firstName,
-        lastName,
-        email,
-        phno,
-        gender,
-        address1,
-        address2,
-        stateValue,
-        cityValue,
-      } = userData;
-      const test = {
-        userID: userID,
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        phno: phno,
-        gender: gender,
-        address1: address1,
-        address2: address2,
-        stateValue: stateValue,
-        cityValue: cityValue,
-      };
+      // await signup(emailRef.current.value, passwordRef.current.value);
+      // const {
+      //   userID,
+      //   firstName,
+      //   lastName,
+      //   email,
+      //   phno,
+      //   gender,
+      //   address1,
+      //   address2,
+      //   stateValue,
+      //   cityValue,
+      // } = userData;
+      // const test = {
+      //   userID: userID,
+      //   firstName: firstName,
+      //   lastName: lastName,
+      //   email: email,
+      //   phno: phno,
+      //   gender: gender,
+      //   address1: address1,
+      //   address2: address2,
+      //   stateValue: stateValue,
+      //   cityValue: cityValue,
+      // };
+      // console.log(test);
 
-      fetch(
-        "https://garbin-database-4943e-default-rtdb.firebaseio.com/garbinUserDB.json",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(test),
-        }
-      );
+      // fetch(
+      //   "https://garbin-database-4943e-default-rtdb.firebaseio.com/garbinUserDB.json",
+      //   {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify(test),
+      //   }
+      // );
       navigate("/");
     } catch {
       setError("Failed to create an account!");

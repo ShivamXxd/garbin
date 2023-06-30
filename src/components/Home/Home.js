@@ -1,51 +1,55 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Navbar from "../Header/Navbar";
 import Footer from "../Footer/Footer";
-import { useAuth } from "../../contexts/AuthContext";
+// import { useAuth } from "../../contexts/AuthContext";
 import { Card } from "react-bootstrap";
-import CircularProgress from "@mui/material/CircularProgress";
-import axios from "axios";
+// import CircularProgress from "@mui/material/CircularProgress";
+// import axios from "axios";
 import "./Home.css";
 
 function Home() {
-  const { currentUser } = useAuth();
-  const currentUserMail = currentUser.email;
-  const URL =
-    "https://garbin-database-4943e-default-rtdb.firebaseio.com/garbinUserDB.json";
-  const [userData, setUserData] = useState({});
-  const [loading, setLoading] = useState(true);
+  // const { currentUser } = useAuth();
+  // const currentUserMail = currentUser.email;
+  // const URL =
+  //   "https://garbin-database-4943e-default-rtdb.firebaseio.com/garbinUserDB.json";
+  // const [userData, setUserData] = useState({});
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await axios(URL);
-      setUserData(response.data);
-      setLoading(false);
-    }
-    fetchData();
-  }, []);
-  const currentUserArray = [];
-  for (let key in userData) {
-    if (userData[key].email === currentUserMail)
-      currentUserArray.push(userData[key]);
-  }
-  const currentUserObject = currentUserArray[0];
-  if (loading) {
-    return (
-      <div className="spinner">
-        <CircularProgress />
-      </div>
-    );
-  }
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     await fetch(URL)
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         setUserData(data);
+  //         console.log(data);
+  //       });
+  //     setLoading(false);
+  //   }
+  //   fetchData();
+  // }, [userData]);
+  // console.log(userData);
+  // const currentUserArray = [];
+  // for (let key in userData) {
+  //   if (userData[key].email === currentUserMail)
+  //     currentUserArray.push(userData[key]);
+  // }
+  // const currentUserObject = currentUserArray[0];
+  // if (loading) {
+  //   return (
+  //     <div className="spinner">
+  //       <CircularProgress />
+  //     </div>
+  //   );
+  // }
   return (
     <>
       <Navbar />
       <div className="home_container">
         <div className="slogan">Clean India will make Green India</div>
         <div className="welcome_msg">
-          Welcome{" "}
-          {currentUserObject.firstName + " " + currentUserObject.lastName}
+          Welcome Shivam Bharti
           <div>
-            Your <strong>Unique ID</strong> is {currentUserObject.userID}
+            Your <strong>Unique ID</strong> is 18388129478
           </div>
         </div>
         <div className="topic_title1">

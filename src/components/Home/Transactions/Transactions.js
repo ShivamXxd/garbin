@@ -23,13 +23,21 @@ function Transactions() {
           </div>
         </div>
         <div className="gc_container">
-          <GiftCard logo="./images/Amazon_logo.svg" amount="$25" tokens={175} />
+          <GiftCard
+            logo="./images/Amazon_logo.svg"
+            amount="Rs.175"
+            tokens={175}
+          />
           <GiftCard
             logo="./images/Flipkart_logo.svg"
-            amount="$15"
+            amount="Rs.150"
             tokens={150}
           />
-          <GiftCard logo="./images/Zomato_logo.png" amount="$30" tokens={200} />
+          <GiftCard
+            logo="./images/Zomato_logo.png"
+            amount="Rs.200"
+            tokens={200}
+          />
         </div>
       </div>
       <Footer />
